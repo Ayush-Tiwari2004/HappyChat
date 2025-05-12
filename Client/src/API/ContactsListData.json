@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "name": "Ayush Tiwari",
+        "description": "Jay Shree Ram",
+        "chatData":[
+            {"id" : "1sg", "chat" : "Hi bro hello"},
+            {"id" : "2dghds", "chat" : "kya haal hai ?"},
+            {"id" : "3dagas", "chat" : "kuchh bologe..."}
+        ]
+    },
+    {
+        "id": "2",
+        "name": "John Doe",
+        "description": "Looking forward to our meeting next week!",
+        "chatData":[
+            {"id" : "1sdfastr", "chat" : "Hi"},
+            {"id" : "2sdgdrv", "chat" : "kaise ho tum ?"},
+            {"id" : "3sdfrsz", "chat" : "kuchh to bolo..."}
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Jane Smith",
+        "description": "Excited to catch up over coffee!",
+        "chatData":[
+            {"id" : "1weterf", "chat" : "Hi bro"},
+            {"id" : "2ewrtvsdr", "chat" : "kya haal hai ?"},
+            {"id" : "3slfgker", "chat" : "kuchh bolo..."}
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Michael Johnson",
+        "description": "Let's discuss the project updates."
+    },
+    {
+        "id": "5",
+        "name": "Emily Davis",
+        "description": "I will send you the report by Friday."
+    },
+    {
+        "id": "6",
+        "name": "Chris Brown",
+        "description": "Can we reschedule our call?"
+    },
+    {
+        "id": "7",
+        "name": "Jessica Wilson",
+        "description": "Happy to help with your queries!"
+    },
+    {
+        "id": "8",
+        "name": "David Lee",
+        "description": "Thanks for your support!"
+    },
+    {
+        "id": "9",
+        "name": "Sarah Miller",
+        "description": "Looking forward to the event!"
+    },
+    {
+        "id": "10",
+        "name": "Daniel Garcia",
+        "description": "Let's finalize the details soon."
+    },
+    {
+        "id": "11",
+        "name": "Laura Martinez",
+        "description": "I appreciate your feedback!"
+    },
+    {
+        "id": "12",
+        "name": "James Anderson",
+        "description": "I will be out of the office next week."
+    },
+    {
+        "id": "13",
+        "name": "Patricia Thomas",
+        "description": "Can you send me the agenda?"
+    },
+    {
+        "id": "14",
+        "name": "Robert Jackson",
+        "description": "Thanks for the update!"
+    },
+    {
+        "id": "15",
+        "name": "Linda White",
+        "description": "Let's touch base later this week."
+    },
+    {
+        "id": "16",
+        "name": "William Harris",
+        "description": "I will follow up on this matter."
+    },
+    {
+        "id": "17",
+        "name": "Rachel Howard",
+        "description": "Definitely! I get back on Tuesday, so I'll call you then."
+    }
+]
