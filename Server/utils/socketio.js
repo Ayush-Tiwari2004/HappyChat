@@ -6,8 +6,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors:{
-      origin:allowOrigins,
-      methods:["POST", "GET"],
+      origin: [
+      "https://happychat-1.onrender.com",
+      "https://happy-chat-iota.vercel.app"
+    ],
+      methods:"GET, POST, DELETE, PATCH, PUT",
       credentials:true,
     }
   });
