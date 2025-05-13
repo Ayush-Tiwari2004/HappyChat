@@ -11,7 +11,7 @@ require('dotenv').config();
 // Connect to database
 connectDb();
 
-const allowOrigins = ["http://localhost:5000", "http://localhost:5173"];
+const allowOrigins = ["https://happychat-1.onrender.com", "https://happy-chat-iota.vercel.app"];
 const corsOption = {
   origin: function (origin, callback) {
     if (allowOrigins.indexOf(origin) !== -1 || !origin) {
