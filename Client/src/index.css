@@ -24,14 +24,8 @@
   .login{
     background: #547792;
   }
-  .bg-goodLookImage{
-    background-image: url(background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   .kalakhattaimage{
-    background-image: url(color-8.png); 
+    background-image: url(/color-8.png); 
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 12px;
