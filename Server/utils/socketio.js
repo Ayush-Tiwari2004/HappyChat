@@ -8,7 +8,8 @@ const io = new Server(server, {
     cors:{
       origin: [
       "https://happychat-1.onrender.com",
-      "https://happy-chat-iota.vercel.app"
+      "https://happy-chat-iota.vercel.app",
+      "http://localhost:5000"
     ],
       methods:"GET, POST, DELETE, PATCH, PUT",
       credentials:true,
