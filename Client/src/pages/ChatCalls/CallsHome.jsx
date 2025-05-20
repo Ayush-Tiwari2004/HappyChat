@@ -1,6 +1,8 @@
 import React from 'react'
+import { FaArrowLeft } from 'react-icons/fa6';
 import { IoMdKeypad, IoMdVideocam } from 'react-icons/io';
 import { MdLinkedCamera } from 'react-icons/md';
+import { NavLink } from 'react-router-dom';
 
 const CallsHome = () => {
     const callingData = [
@@ -15,7 +17,8 @@ const CallsHome = () => {
     }
     return (
         <>
-            <div className="flex justify-center items-center w-full h-full">
+            <div className="flex justify-center items-center w-full h-screen bg-slate-300 dark:bg-slate-800">
+                <NavLink className="absolute top-0 left-0 p-2 hover:bg-slate-600 rounded-md md:hidden" to="/profile"><FaArrowLeft /></NavLink>
                 <div className="flex gap-8 text-6xl">
                     {
                         callingData.map((item) => (

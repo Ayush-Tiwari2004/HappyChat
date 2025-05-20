@@ -136,7 +136,7 @@ export const ContactList = () => {
                       <span className={onlineUsers.includes(user._id) ? "absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white dark:border-gray-800" : ""}></span>
                     </div>
                     <div className="flex-grow">
-                      <p className="font-semibold">{user.username || user.name}</p>
+                      <p className="font-semibold text-slate-700 dark:text-white">{user.username || user.name}</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
                         {lastMessageData?.lastMessage
                           ? lastMessageData.lastMessage.length > 25

@@ -14,15 +14,10 @@
         "actionType": "calls" 
     },
     { 
-        "id": "3regrgver", 
-        "menuTitle": "Status", 
-        "icon": "FaHeart",
-        "sidebarUrl": "/profile/status" 
-    },
-    { 
         "id": "sghresryser4", 
         "menuTitle": "Profile", 
         "others": "OTHERS",
+        "settingPopupBtn": "handleProfilePopupLink",
         "icon": "IoMdSettings",
         "actionKey": "profilePopupLink"
     }

@@ -9,7 +9,8 @@ const io = new Server(server, {
       origin: [
       "https://happychat-1.onrender.com",
       "https://happy-chat-iota.vercel.app",
-      "http://localhost:5000"
+      "http://localhost:5000",
+      "http://localhost:5173",
     ],
       methods:"GET, POST, DELETE, PATCH, PUT",
       credentials:true,

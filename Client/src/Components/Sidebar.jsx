@@ -26,10 +26,8 @@ const Sidebar = ({ onContactsClick, onCallsClick }) => {
       return onCallsClick();
     }
   }
-  const handleProfilePopupLink = (actionKey) => {
-    if(actionKey === "profilePopupLink") {
-      SetShowSidebarPopup(prev => !prev);
-    }
+  const handleProfilePopupLink = () => {
+    SetShowSidebarPopup(prev => !prev);
   }
 
   return (
@@ -61,20 +59,31 @@ const Sidebar = ({ onContactsClick, onCallsClick }) => {
           <p className='text-sm ms-3 text-slate-400'>MENU</p>
           {
             sidebarData.map((item) => (
-              <div onClick={() => { handleItemClick(item) }} className="">
+              <div key={item.id} onClick={() => { handleItemClick(item) }} className="">
                 <h1 className='py-1 ms-4 text-sm text-slate-400'>{item.others}</h1>
-                <NavLink onClick={() => handleProfilePopupLink(item.actionKey)} to={item.sidebarUrl} key={item.id}>
-                  <div className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-700 px-3 py-2 rounded-lg">
+                {item.actionKey === "profilePopupLink" ? (
+                  <div onClick={handleProfilePopupLink} className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-700 px-3 py-2 rounded-lg cursor-pointer">
                     <div className='text-lg'>{sidebarIcon[item.icon]}</div>
                     <p className='text-sm leading-tight pt-1'>{item.menuTitle}</p>
                   </div>
-                </NavLink>
+                ) : (
+                  <NavLink to={item.sidebarUrl} key={item.id}>
+                    <div className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-700 px-3 py-2 rounded-lg">
+                      <div className='text-lg'>{sidebarIcon[item.icon]}</div>
+                      <p className='text-sm leading-tight pt-1'>{item.menuTitle}</p>
+                    </div>
+                  </NavLink>
+                )}
               </div>
             ))
           }
+          {/* <div onClick={handleProfilePopupLink} className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-700 px-3 py-2 rounded-lg cursor-pointer">
+            <div className='text-lg'><IoSettingsOutline /></div>
+            <p className='text-sm leading-tight pt-1'>Profile</p>
+          </div> */}
         </div>
       </div>
-        <ProfilePopup show={showSidebarPopup} onClose={() => SetShowSidebarPopup(false)} />
+      <ProfilePopup show={showSidebarPopup} onClose={() => SetShowSidebarPopup(false)} />
     </section>
   )
 }
