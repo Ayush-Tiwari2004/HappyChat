@@ -96,7 +96,6 @@ export const Signup = () => {
                   onChange={handleInputChange}
                   placeholder='Enter your name'
                   className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
                 />
               </div>
               <div className="mb-4">
@@ -108,7 +107,6 @@ export const Signup = () => {
                   onChange={handleInputChange}
                   placeholder='Enter your email'
                   className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
                 />
               </div>
               <div className="mb-6">
@@ -120,7 +118,6 @@ export const Signup = () => {
                   onChange={handleInputChange}
                   placeholder='Enter your password'
                   className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
                 />
               </div>
               <button

@@ -73,7 +73,7 @@ const login = async (req, res) => {
                 message: errorMessage,
                 success: false
             });
-        }
+        } 
 
         const jwtToken = jwt.sign(
             {

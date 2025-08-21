@@ -5,6 +5,7 @@ const connectDb = require('./config/db');
 const authRouter = require('./routes/authRoutes');
 const forgotpassRouter = require('./routes/forgotpassRoutes');
 const postRouter = require('./routes/postRoutes');
+const profilePicRouter = require('./routes/profilepicRoutes');
 const messageRouter = require('./routes/messageRoutes');
 const {app, server} = require('./utils/socketio');
 require('dotenv').config();
@@ -33,6 +34,7 @@ app.use("/api/auth", authRouter);
 app.use("/api", forgotpassRouter);
 app.use("/api/post", postRouter);
 app.use("/api/message", messageRouter);
+app.use('/api/profile', profilePicRouter); // Unique route for profile picture
 
 app.get("/", (req, res) => {
   res.json({ message: "Server is running!" });

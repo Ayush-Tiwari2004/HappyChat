@@ -10,6 +10,7 @@ import { setAuthUser } from "../redux/userSlice";
 import { NavLink, useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "../utils";
 import ToggleSwitch from "./ToggleSwitch";
+import { useRef } from "react";
 
 export const ProfilePopup = ({ show, onClose }) => {
     if (!show) return null;
@@ -18,6 +19,7 @@ export const ProfilePopup = ({ show, onClose }) => {
     const [isLightMode, setIsLightMode] = useState(true);
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const inputRef = useRef(null);
     const handleLogout = () => {
         localStorage.clear();
         const logoutSuccess = dispatch(setAuthUser(null));
@@ -30,6 +32,16 @@ export const ProfilePopup = ({ show, onClose }) => {
             handleError("Something going to wrong to user login!");
         }
     }
+     const handleImageClick = () => {
+        inputRef.current.click();
+    }
+    const handlePicChange = (e) => {
+        const files = e.target.files[0];
+        if(!files){
+            console.log("no file selected!");
+            return
+        }
+    }
     return (
         <>
             <div className="fixed inset-0 z-50">
@@ -39,7 +51,15 @@ export const ProfilePopup = ({ show, onClose }) => {
                         <div className="h-full w-screen md:w-full text-gray-700 dark:text-white bg-white dark:bg-slate-800 flex flex-col gap-2 p-5">
                             <div onClick={onClose}><FaArrowLeft /></div>
                             <div className="flex flex-col items-center gap-2">
-                                <img src="/dum.jpg" className='w-24 h-24 rounded-full' alt="" />
+                                <div onClick={handleImageClick} className="relative">
+                                <img  src="/dum.jpg" className='w-24 h-24 rounded-full' alt="" />
+                                <input 
+                                type="file"
+                                onChange={handlePicChange}
+                                ref={inputRef}
+                                className="hidden"
+                                 />
+                                </div>
                                 <p className='leading-3 text-xl font-semibold'>{authUser.username}</p>
                                 <p>CEO & Founder at Crefcard </p>
                             </div>
